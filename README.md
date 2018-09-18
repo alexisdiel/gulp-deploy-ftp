@@ -17,12 +17,12 @@ const gulp = require('gulp');
 const gulpDeployFtp = require('gulp-deploy-ftp');
 
 gulp.src('path/to/file')
-  .pipe(gulpDeployFtp({
-    remotePath: '/tmp',
-    host: 'localhost',
-    port: 21,
-    user: 'foo',
-    pass: 'bar'
-  })
+  .pipe(gulpDeployFtp(
+    /* remotePath */  '/tmp',
+    /* host */  'localhost',
+    /* port */  21,
+    /* user */  'foo',
+    /* pass */  'bar'
+  )
   .pipe(gulp.dest('dest'));
 ```
